@@ -1,10 +1,10 @@
 import React from 'react';
-import atelierImg from '../assets/images/luxury_atelier.png';
+import atelierImg from '../assets/images/luxury-atlier.webp';
 
 const Story = () => {
   return (
     <section id="story" className="bg-cream py-24 lg:py-32 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-24">
+      <div className="rounded-[60px] object-cover shadow-sm max-w-7xl mx-auto px-6 sm:px-12 lg:px-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-32 items-center">
           
           {/* Left Column: Typography & Story */}
