@@ -1,0 +1,68 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&family=Inter:wght@300;400;500;600&family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #FDF8F5;
+  --color-blush: #F5EDE8;
+  --color-gold: #C9A96E;
+  --color-gold-light: #E8D5B0;
+  --color-noir: #1A1208;
+  --color-muted: #8C7B72;
+  --color-rose: #D96B7E;
+  --color-pink: #d4607a;
+
+  --font-display: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+  --font-script: "Great Vibes", cursive;
+
+  --animate-spin-slow: spin 8s linear infinite;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+button, a, [role="button"] { cursor: pointer; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #FDF8F5;
+  color: #1A1208;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", serif;
+}
+
+/* Custom Hero Title Styles */
+.hero-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 0.9;
+  gap: 0;
+}
+
+.hero-title .line-flourish,
+.hero-title .line-parlour {
+  font-family: 'Playfair Display', serif;
+  font-weight: 800;
+  font-size: clamp(4rem, 10vw, 8rem);
+  color: #ffffff;
+  text-transform: capitalize;
+}
+
+.hero-title .line-beauty {
+  font-family: 'Gloock', serif;
+  font-size: clamp(3rem, 8vw, 6rem);
+  color: #d4607a;
+  margin-left: 0.2em; /* slight natural offset */
+  line-height: 0.8;
+}
