@@ -7,21 +7,75 @@ import Footer from '../components/Footer';
 import Masonry from '../components/Masonry';
 
 // Import images
-import haircoloringImg from '../assets/services/hair-coloring.webp';
-import facialImg from '../assets/services/facial.webp';
-import threadingImg from '../assets/services/threading.webp';
-import waxingImg from '../assets/services/waxing.webp';
-import bridalMakeupImg from '../assets/services/bridal-makeup.webp';
+import gallery1 from '../assets/Gallerypictures/gallery-1.webp';
+import gallery2 from '../assets/Gallerypictures/gallery-2.webp';
+import gallery3 from '../assets/Gallerypictures/gallery-3.webp';
+import gallery4 from '../assets/Gallerypictures/gallery-4.webp';
+import gallery5 from '../assets/Gallerypictures/gallery-5.webp';
+import gallery6 from '../assets/Gallerypictures/gallery-6.webp';
+import gallery7 from '../assets/Gallerypictures/gallery-7.webp';
+import gallery8 from '../assets/Gallerypictures/gallery-8.webp';
+import gallery9 from '../assets/Gallerypictures/gallery-9.webp';
+import gallery10 from '../assets/Gallerypictures/gallery-10.webp';
+import gallery11 from '../assets/Gallerypictures/gallery-11.webp';
+import gallery12 from '../assets/Gallerypictures/gallery-12.webp';
+import gallery13 from '../assets/Gallerypictures/gallery-13.webp';
+import gallery14 from '../assets/Gallerypictures/gallery-14.webp';
+import gallery15 from '../assets/Gallerypictures/gallery-15.webp';
+import gallery16 from '../assets/Gallerypictures/gallery-16.webp';
+import gallery17 from '../assets/Gallerypictures/gallery-17.webp';
+import gallery18 from '../assets/Gallerypictures/gallery-18.webp';
+import gallery19 from '../assets/Gallerypictures/gallery-19.webp';
+import gallery20 from '../assets/Gallerypictures/gallery-20.webp';
+import gallery21 from '../assets/Gallerypictures/gallery-21.webp';
+import gallery22 from '../assets/Gallerypictures/gallery-22.webp';
+import gallery23 from '../assets/Gallerypictures/gallery-23.webp';
+import gallery24 from '../assets/Gallerypictures/gallery-24.webp';
+import gallery25 from '../assets/Gallerypictures/gallery-25.webp';
+import gallery26 from '../assets/Gallerypictures/gallery-26.webp';
+import gallery27 from '../assets/Gallerypictures/gallery-27.webp';
+import gallery28 from '../assets/Gallerypictures/gallery-28.webp';
+import gallery29 from '../assets/Gallerypictures/gallery-29.webp';
+import gallery30 from '../assets/Gallerypictures/gallery-30.webp';
+import gallery31 from '../assets/Gallerypictures/gallery-31.webp';
+import gallery32 from '../assets/Gallerypictures/gallery-32.webp';
+
 
 const GalleryPage = () => {
   const [selectedItem, setSelectedItem] = useState(null);
-
   const galleryItems = [
-    { id: "1", category: 'Hair', img: haircoloringImg, title: 'Hair Coloring' },
-    { id: "2", category: 'Bridal', img: bridalMakeupImg, title: 'Bridal Makeup' },
-    { id: "3", category: 'Facials', img: facialImg, title: 'Facial Treatment' },
-    { id: "4", category: 'Threading', img: threadingImg, title: 'Threading' },
-    { id: "5", category: 'Waxing', img: waxingImg, title: 'Waxing' },
+    { id: "1", category: 'gallery-1', img: gallery1, title: 'gallery-1' },
+    { id: "2", category: 'gallery-2', img: gallery2, title: 'gallery-2' },
+    { id: "3", category: 'gallery-3', img: gallery3, title: 'gallery-3' },
+    { id: "4", category: 'gallery-4', img: gallery4, title: 'gallery-4' },
+    { id: "5", category: 'gallery-5', img: gallery5, title: 'gallery-5' },
+    { id: "6", category: 'gallery-6', img: gallery6, title: 'gallery-6' },
+    { id: "7", category: 'gallery-7', img: gallery7, title: 'gallery-7' },
+    { id: "8", category: 'gallery-8', img: gallery8, title: 'gallery-8' },
+    { id: "9", category: 'gallery-9', img: gallery9, title: 'gallery-9' },
+    { id: "10", category: 'gallery-10', img: gallery10, title: 'gallery-10' },
+    { id: "11", category: 'gallery-11', img: gallery11, title: 'gallery-11' },
+    { id: "12", category: 'gallery-12', img: gallery12, title: 'gallery-12' },
+    { id: "13", category: 'gallery-13', img: gallery13, title: 'gallery-13' },
+    { id: "14", category: 'gallery-14', img: gallery14, title: 'gallery-14' },
+    { id: "15", category: 'gallery-15', img: gallery15, title: 'gallery-15' },
+    { id: "16", category: 'gallery-16', img: gallery16, title: 'gallery-16' },
+    { id: "17", category: 'gallery-17', img: gallery17, title: 'gallery-17' },
+    { id: "18", category: 'gallery-18', img: gallery18, title: 'gallery-18' },
+    { id: "19", category: 'gallery-19', img: gallery19, title: 'gallery-19' },
+    { id: "20", category: 'gallery-20', img: gallery20, title: 'gallery-20' },
+    { id: "21", category: 'gallery-21', img: gallery21, title: 'gallery-21' },
+    { id: "22", category: 'gallery-22', img: gallery22, title: 'gallery-22' },
+    { id: "23", category: 'gallery-23', img: gallery23, title: 'gallery-23' },
+    { id: "24", category: 'gallery-24', img: gallery24, title: 'gallery-24' },
+    { id: "25", category: 'gallery-25', img: gallery25, title: 'gallery-25' },
+    { id: "26", category: 'gallery-26', img: gallery26, title: 'gallery-26' },
+    { id: "27", category: 'gallery-27', img: gallery27, title: 'gallery-27' },
+    { id: "28", category: 'gallery-28', img: gallery28, title: 'gallery-28' },
+    { id: "29", category: 'gallery-29', img: gallery29, title: 'gallery-29' },
+    { id: "30", category: 'gallery-30', img: gallery30, title: 'gallery-30' },
+    { id: "31", category: 'gallery-31', img: gallery31, title: 'gallery-31' },
+    { id: "32", category: 'gallery-32', img: gallery32, title: 'gallery-32' },
   ];
 
   return (
@@ -30,10 +84,11 @@ const GalleryPage = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className="bg-cream"
+      style={{ paddingBottom: '80px' }}
     >
       <Navbar />
       
-      <main className="min-h-screen pt-24 pb-20">
+      <main className="min-h-screen pt-24 pb-20" style={{ minHeight: '100vh', paddingBottom: '100px' }}>
         {/* Header Section */}
         <section className="bg-noir py-20 sm:py-28 text-center overflow-hidden relative">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] bg-[radial-gradient(circle,rgba(201,169,110,0.05)_0%,transparent_70%)] pointer-events-none" />
@@ -60,7 +115,7 @@ const GalleryPage = () => {
         </section>
 
         {/* New Masonry Layout */}
-        <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 py-16 sm:py-24 min-h-[1200px]">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 py-16 sm:py-24 min-h-[1200px]" style={{ marginBottom: '60px' }}>
           <Masonry 
             items={galleryItems}
             animateFrom="bottom"
