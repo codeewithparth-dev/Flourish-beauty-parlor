@@ -29,7 +29,7 @@ const Contact = () => {
             <div className="space-y-4">
               <p className="font-body text-[10px] text-gold tracking-[0.2em] uppercase">Concierge</p>
               <p className="font-display text-2xl text-noir leading-relaxed">
-                (212) 555-0198 <br />
+                (324) 2008736  <br />
                 hello@flourish.com
               </p>
             </div>
@@ -37,8 +37,8 @@ const Contact = () => {
             <div className="space-y-4">
               <p className="font-body text-[10px] text-gold tracking-[0.2em] uppercase">Atelier Hours</p>
               <div className="font-body text-sm text-muted/80 space-y-1 tracking-wide uppercase">
-                <p>Mon-Fri • 09:00 - 20:00</p>
-                <p>Sat • 10:00 - 18:00</p>
+                <p>Mon-Fri • 01:00pm - 12:00pm</p>
+                <p>Sat • 12:00 - 11:00</p>
                 <p>Sun • By Appointment</p>
               </div>
             </div>

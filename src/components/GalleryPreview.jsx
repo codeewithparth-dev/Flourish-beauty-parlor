@@ -1,17 +1,17 @@
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import bridalmakeupImg from '../assets/services/bridal-makeup.webp';
-import haircoloringImg from '../assets/services/hair-coloring.webp';
-import facialImg from '../assets/services/facial.webp';
+import bridalImg from '../assets/Gallerypictures/bridal-8.webp';
+import haircutImg from '../assets/Gallerypictures/haircut-2.webp';
+import makeupImg from '../assets/Gallerypictures/makeup-2.webp';
 
 export default function GalleryPreview() {
   const navigate = useNavigate();
 
   const items = [
-    { img: bridalmakeupImg, label: 'Bridal Makeup', height: 'h-[450px]', mt: 'mt-0' },
-    { img: haircoloringImg, label: 'Hair Coloring', height: 'h-[350px]', mt: 'mt-12' },
-    { img: facialImg, label: 'Facial', height: 'h-[400px]', mt: 'mt-6' },
+    { img: bridalImg, label: 'Bridal Makeup', height: 'h-[450px]', mt: 'mt-0' },
+    { img: haircutImg, label: 'Haircut', height: 'h-[350px]', mt: 'mt-12' },
+    { img: makeupImg, label: 'Makeup', height: 'h-[400px]', mt: 'mt-6' },
   ];
 
   const containerVariants = {

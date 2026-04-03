@@ -109,7 +109,7 @@ const Masonry = ({
     return items.map(child => {
       const col = colHeights.indexOf(Math.min(...colHeights));
       const x = col * (columnWidth + gap);
-      const height = (child.height / 2) || 200; // Added safety fallback
+      const height = child.height || 300;
       const y = colHeights[col];
 
       colHeights[col] += height + gap;
@@ -181,7 +181,15 @@ const Masonry = ({
   };
 
   return (
-    <div ref={containerRef} className="relative w-full h-full min-h-[800px]">
+    <div
+      ref={containerRef}
+      className="relative w-full"
+      style={{
+        height: grid.length
+          ? Math.max(...grid.map(item => item.y + item.h)) + 40
+          : 800
+      }}
+    >
       {grid.map(item => (
         <div
           key={item.id}
@@ -192,9 +200,17 @@ const Masonry = ({
           onMouseEnter={e => handleMouseEnter(item.id, e.currentTarget)}
           onMouseLeave={e => handleMouseLeave(item.id, e.currentTarget)}
         >
-          <div
-            className="relative w-full h-full bg-cover bg-center rounded-[20px] shadow-[0px_10px_50px_-10px_rgba(0,0,0,0.1)] transition-shadow duration-500 hover:shadow-2xl grayscale-[0.2] hover:grayscale-0"
-            style={{ backgroundImage: `url(${item.img})` }}
+          <img
+            src={item.img}
+            alt="gallery"
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              borderRadius: '20px',
+              display: 'block'
+            }}
+            className="shadow-[0px_10px_50px_-10px_rgba(0,0,0,0.1)] transition-shadow duration-500 hover:shadow-2xl grayscale-[0.2] hover:grayscale-0"
           />
         </div>
       ))}
