@@ -9,12 +9,14 @@ import Logo from '../components/Logo';
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const location = useLocation();
   const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
       if (window.innerWidth >= 768 && open) setOpen(false);
     };
 
@@ -65,9 +67,15 @@ export default function Navbar() {
             }
           }}
           className="flex items-center"
-          style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}
+          style={{ 
+            background: 'none', 
+            border: 'none', 
+            padding: 0, 
+            cursor: 'pointer',
+            minWidth: '100px'
+          }}
         >
-          <Logo scrolled={scrolled} size={64} />
+          <Logo scrolled={scrolled} size={scrolled ? 32 : 44} style={{ minWidth: '100px' }} lightBg={!isHomePage || scrolled} />
         </motion.button>
 
         {/* Links - Center aligned */}
@@ -91,7 +99,7 @@ export default function Navbar() {
               }}
             >
               {item}
-              <span className="absolute bottom-[-4px] left-0 w-0 h-[1px] bg-rose transition-all duration-300 group-hover:w-full" />
+              <span className="absolute -bottom-1 left-0 w-0 h-px bg-rose transition-all duration-300 group-hover:w-full" />
             </motion.button>
           ))}
         </div>

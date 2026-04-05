@@ -25,7 +25,7 @@ export default function Hero() {
               <span className="line-flourish text-7xl sm:text-8xl lg:text-9xl text-cream uppercase tracking-tighter">
                 Flourish
               </span>
-              <span className="line-beauty text-rose font-script text-[3rem] sm:text-[4rem] lg:text-[5rem] -my-[0.1em] sm:-my-[0.15em]">
+              <span className="line-beauty text-rose font-script text-[3rem] sm:text-[4rem] lg:text-[5rem] -my-[0.02em] sm:-my-[0.05em]">
                 Beauty
               </span>
               <span className="line-parlour text-7xl sm:text-8xl lg:text-9xl text-cream uppercase tracking-tighter">
@@ -42,7 +42,7 @@ export default function Hero() {
                 onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
                 className="group flex items-center gap-4 text-cream font-body text-xs tracking-widest uppercase transition-colors hover:text-rose"
               >
-                <span className="w-12 h-[1px] bg-gold group-hover:w-16 transition-all duration-300" />
+                <span className="w-12 h-px bg-gold group-hover:w-16 transition-all duration-300" />
                 Explore Services
               </button>
             </div>

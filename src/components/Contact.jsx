@@ -3,7 +3,7 @@ import { MapPin } from 'lucide-react';
 
 const Contact = () => {
   return (
-    <section id="contact" className="bg-[#FDF8F5] py-24 lg:py-32">
+    <section id="contact" className="bg-cream py-24 lg:py-32">
       <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-24">
         
         {/* Section Header */}
@@ -45,7 +45,7 @@ const Contact = () => {
           </div>
 
           {/* Map Placeholder */}
-          <div className="relative rounded-[40px] overflow-hidden aspect-[21/9] bg-blush/30 border border-gold/10 group">
+          <div className="relative rounded-[40px] overflow-hidden aspect-21/9 bg-blush/30 border border-gold/10 group">
             <div className="absolute inset-0 flex items-center justify-center">
               <MapPin className="w-8 h-8 text-gold/20 group-hover:scale-110 transition-transform duration-500" />
             </div>

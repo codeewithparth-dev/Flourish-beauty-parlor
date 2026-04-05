@@ -2,13 +2,11 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { scrollToSection } from '../utils/scroll';
-import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import Services from '../components/Services';
 import Story from '../components/Story';
 import GalleryPreview from '../components/GalleryPreview';
 import Contact from '../components/Contact';
-import Footer from '../components/Footer';
 
 const HomePage = () => {
   const { hash } = useLocation();
@@ -31,13 +29,11 @@ const HomePage = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <Navbar />
       <Hero />
       <Services />
       <Story />
       <GalleryPreview />
       <Contact />
-      <Footer />
     </motion.div>
   );
 };

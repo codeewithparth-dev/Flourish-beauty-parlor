@@ -12,7 +12,7 @@ import waxingImg from '../assets/services/waxing.webp';
 function ServiceCard({ title, desc, tag, icon: Icon, img, dark = false }) {
   return (
     <div
-      className={`relative rounded-[40px] p-8 sm:p-10 lg:p-12 min-h-[400px] flex flex-col justify-between overflow-hidden transition-all duration-700 group shadow-lg hover:shadow-2xl`}
+      className={`relative rounded-[40px] p-8 sm:p-10 lg:p-12 min-h-100 flex flex-col justify-between overflow-hidden transition-all duration-700 group shadow-lg hover:shadow-2xl`}
     >
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
@@ -45,7 +45,7 @@ function ServiceCard({ title, desc, tag, icon: Icon, img, dark = false }) {
         <h3 className="font-display text-3xl sm:text-4xl leading-tight mb-4 text-white">
           {title}
         </h3>
-        <p className="font-body text-sm leading-relaxed tracking-wide text-white/70 max-w-[280px]">
+        <p className="font-body text-sm leading-relaxed tracking-wide text-white/70 max-w-70">
           {desc}
         </p>
       </div>
@@ -57,7 +57,7 @@ function ServiceCard({ title, desc, tag, icon: Icon, img, dark = false }) {
           className="flex items-center gap-3 text-white font-body text-[10px] tracking-[0.2em] uppercase cursor-pointer"
         >
           Enquire Now
-          <span className="w-8 h-[1px] bg-white/50"></span>
+          <span className="w-8 h-px bg-white/50"></span>
         </button>
       </div>
     </div>
@@ -66,7 +66,7 @@ function ServiceCard({ title, desc, tag, icon: Icon, img, dark = false }) {
 
 export default function Services() {
   return (
-    <section id="services" className="bg-[#FDF8F5] py-24 lg:py-32">
+    <section id="services" className="bg-cream py-24 lg:py-32">
       <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-24">
 
         {/* Header */}

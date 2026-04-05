@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, X } from 'lucide-react';
 import { WHATSAPP_URL } from '../utils/whatsapp';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import Masonry from '../components/Masonry';
 
 // ── Bridal ──────────────────────────────────────────────
@@ -95,8 +93,6 @@ const GalleryPage = () => {
 
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-      <Navbar />
-
       <div style={{ flex: 1, paddingBottom: '120px', paddingTop: '100px' }}>
 
         {/* ── Header ───────────────────────────────── */}
@@ -172,7 +168,7 @@ const GalleryPage = () => {
           style={{
             display: 'flex',
             justifyContent: 'center',
-            gap: '12px',
+            gap: '8px',
             flexWrap: 'wrap',
             padding: '40px 16px 8px',
           }}
@@ -184,18 +180,19 @@ const GalleryPage = () => {
                 key={filter}
                 onClick={() => setActiveFilter(filter)}
                 style={{
-                  padding: '10px 28px',
+                  padding: '8px 16px',
                   borderRadius: '999px',
                   border: '1px solid #e8a0b8',
                   background: isActive ? '#e8a0b8' : 'transparent',
                   color: isActive ? '#ffffff' : '#e8a0b8',
-                  fontSize: '13px',
+                  fontSize: '12px',
                   fontFamily: 'var(--font-body, sans-serif)',
                   letterSpacing: '0.1em',
                   cursor: 'pointer',
                   fontWeight: isActive ? 600 : 400,
                   transition: 'all 0.25s ease',
                   outline: 'none',
+                  whiteSpace: 'nowrap',
                 }}
               >
                 {filter}
@@ -296,7 +293,7 @@ const GalleryPage = () => {
                 <img
                   src={selectedItem.img}
                   alt={selectedItem.category}
-                  loading="lazy"
+                  loading="eager"
                   decoding="async"
                   style={{
                     maxWidth: '90vw',
@@ -355,7 +352,6 @@ const GalleryPage = () => {
         )}
       </AnimatePresence>
 
-      <Footer />
     </div>
   );
 };

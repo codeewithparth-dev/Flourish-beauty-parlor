@@ -14,7 +14,7 @@ const Story = () => {
                 Beyond the <br />
                 <span className="relative inline-block">
                   <span className="relative z-10 italic font-light">Surface</span>
-                  <span className="absolute -bottom-2 left-0 w-full h-[1px] bg-rose/30"></span>
+                  <span className="absolute -bottom-2 left-0 w-full h-px bg-rose/30"></span>
                 </span>
               </h2>
 
@@ -37,7 +37,7 @@ const Story = () => {
           {/* Right Column: Imagery */}
           <div className="relative">
             {/* The Image with large rounded corners */}
-            <div className="relative z-10 rounded-[40px] overflow-hidden shadow-2xl aspect-[4/5]">
+            <div className="relative z-10 rounded-[40px] overflow-hidden shadow-2xl aspect-4/5">
               <img
                 src={atelierImg}
                 alt="Flourish Atelier Interior"
@@ -48,8 +48,8 @@ const Story = () => {
             </div>
 
             {/* Decorative background shape */}
-            <div className="absolute -top-10 -right-10 w-64 h-64 bg-blush rounded-full -z-0 opacity-50"></div>
-            <div className="absolute -bottom-10 -left-10 w-40 h-40 border border-gold/10 rounded-full -z-0"></div>
+            <div className="absolute -top-10 -right-10 w-64 h-64 bg-blush rounded-full z-0 opacity-50"></div>
+            <div className="absolute -bottom-10 -left-10 w-40 h-40 border border-gold/10 rounded-full z-0"></div>
           </div>
 
         </div>

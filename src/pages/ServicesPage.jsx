@@ -12,8 +12,6 @@ import {
   Brush,
   Footprints
 } from 'lucide-react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import { WHATSAPP_SERVICE_URL } from '../utils/whatsapp';
 
 import facialImg from '../assets/services/facial.webp';
@@ -99,6 +97,7 @@ const services = [
 
 const ServiceCard = ({ service, isLarge, index }) => {
   const Icon = service.icon;
+  const imagePosition = service.name === 'Bleach' ? 'center 20%' : 'center top';
 
   return (
     <motion.div
@@ -106,20 +105,21 @@ const ServiceCard = ({ service, isLarge, index }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay: (index % 5) * 0.1 }}
-      className={`relative rounded-[40px] flex flex-col overflow-hidden group shadow-sm hover:shadow-2xl transition-all duration-700 ${isLarge ? 'min-h-[529px] md:col-span-3' : 'min-h-[450px] md:col-span-2 bg-white'
+      className={`relative rounded-[40px] flex flex-col overflow-hidden group shadow-sm hover:shadow-2xl transition-all duration-700 ${isLarge ? 'min-h-132.25 md:col-span-3' : 'min-h-112.5 md:col-span-2 bg-white'
         }`}
     >
       {/* Image Layer */}
-      <div className={`${isLarge ? 'absolute inset-0' : 'h-48 w-full'} overflow-hidden`}>
+      <div className={`${isLarge ? 'absolute inset-0' : 'h-64 w-full'} overflow-hidden`}>
         <img
           src={service.img}
           alt={service.name}
-          className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 grayscale-[0.2] group-hover:grayscale-0"
+          className="w-full h-full object-cover object-top transition-transform duration-1000 group-hover:scale-110 grayscale-[0.2] group-hover:grayscale-0"
+          style={{ objectPosition: imagePosition }}
         />
-        {isLarge && <div className="absolute inset-0 bg-gradient-to-t from-noir via-noir/20 to-transparent opacity-80" />}
+        {isLarge && <div className="absolute inset-0 bg-linear-to-t from-noir via-noir/20 to-transparent opacity-80" />}
       </div>
 
-      <div className={`relative z-10 p-8 sm:p-10 flex flex-col justify-between flex-grow ${isLarge ? 'text-white' : 'text-noir'}`}>
+      <div className={`relative z-10 p-8 sm:p-10 flex flex-col justify-between grow ${isLarge ? 'text-white' : 'text-noir'}`}>
         <div>
           <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-6 transition-colors duration-500 ${isLarge ? 'bg-white/10 backdrop-blur-md' : 'bg-pink/10'
             }`}>
@@ -154,7 +154,6 @@ const ServiceCard = ({ service, isLarge, index }) => {
 const ServicesPage = () => {
   return (
     <div className="bg-cream min-h-screen">
-      <Navbar />
 
       {/* Hero Section */}
       <section className="pt-40 pb-20 px-6 sm:px-12 lg:px-24">
@@ -203,7 +202,6 @@ const ServicesPage = () => {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 };

@@ -1,13 +1,13 @@
-import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 
 const useMedia = (queries, values, defaultValue) => {
-  const get = () => values[queries.findIndex(q => matchMedia(q).matches)] ?? defaultValue;
+  const get = useCallback(() => values[queries.findIndex(q => matchMedia(q).matches)] ?? defaultValue, [queries, values, defaultValue]);
 
   const [value, setValue] = useState(get);
 
   useEffect(() => {
-    const handler = () => setValue(get);
+    const handler = () => setValue(get());
     queries.forEach(q => matchMedia(q).addEventListener('change', handler));
     return () => queries.forEach(q => matchMedia(q).removeEventListener('change', handler));
   }, [get, queries]);
@@ -32,19 +32,6 @@ const useMeasure = () => {
   return [ref, size];
 };
 
-const preloadImages = async urls => {
-  await Promise.all(
-    urls.map(
-      src =>
-        new Promise(resolve => {
-          const img = new Image();
-          img.src = src;
-          img.onload = img.onerror = () => resolve();
-        })
-    )
-  );
-};
-
 const Masonry = ({
   items,
   ease = 'power3.out',
@@ -54,7 +41,6 @@ const Masonry = ({
   scaleOnHover = true,
   hoverScale = 0.95,
   blurToFocus = true,
-  colorShiftOnHover = false,
   onItemClick
 }) => {
   const columns = useMedia(
@@ -66,7 +52,7 @@ const Masonry = ({
   const [containerRef, { width }] = useMeasure();
   const [imagesReady, setImagesReady] = useState(false);
 
-  const getInitialPosition = item => {
+  const getInitialPosition = useCallback((item) => {
     const containerRect = containerRef.current?.getBoundingClientRect();
     if (!containerRect) return { x: item.x, y: item.y };
 
@@ -93,11 +79,12 @@ const Masonry = ({
       default:
         return { x: item.x, y: item.y + 100 };
     }
-  };
+  }, [animateFrom, containerRef]);
 
+  // Set imagesReady to true immediately since we're using native lazy loading
   useEffect(() => {
-    preloadImages(items.map(i => i.img)).then(() => setImagesReady(true));
-  }, [items]);
+    setImagesReady(true);
+  }, []);
 
   const grid = useMemo(() => {
     if (!width) return [];
@@ -158,9 +145,9 @@ const Masonry = ({
     });
 
     hasMounted.current = true;
-  }, [grid, imagesReady, stagger, animateFrom, blurToFocus, duration, ease]);
+  }, [grid, imagesReady, stagger, animateFrom, blurToFocus, duration, ease, getInitialPosition]);
 
-  const handleMouseEnter = (id, element) => {
+  const handleMouseEnter = (id) => {
     if (scaleOnHover) {
       gsap.to(`[data-key="${id}"]`, {
         scale: hoverScale,
@@ -170,7 +157,7 @@ const Masonry = ({
     }
   };
 
-  const handleMouseLeave = (id, element) => {
+  const handleMouseLeave = (id) => {
     if (scaleOnHover) {
       gsap.to(`[data-key="${id}"]`, {
         scale: 1,
@@ -203,6 +190,7 @@ const Masonry = ({
           <img
             src={item.img}
             alt="gallery"
+            loading="lazy"
             style={{
               width: '100%',
               height: '100%',

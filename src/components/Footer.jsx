@@ -3,7 +3,7 @@ import { WHATSAPP_URL } from '../utils/whatsapp';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1A1208] border-t border-gold/10 py-20 lg:py-24">
+    <footer className="bg-noir border-t border-gold/10 py-20 lg:py-24">
       <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-24">
         <div className="flex flex-col items-center gap-10 text-center">
           
@@ -30,7 +30,7 @@ export default function Footer() {
 
           {/* Secondary Links */}
           <div className="flex flex-wrap gap-8 justify-center pt-8 border-t border-cream/5 w-full mt-10">
-            {['Privacy', 'Terms', 'Instagram', 'Pinterest'].map(link => (
+            {[].map(link => (
               <span 
                 key={link}
                 className="font-body text-[10px] tracking-[0.2em] uppercase text-gold/60 hover:text-gold transition-colors cursor-pointer"

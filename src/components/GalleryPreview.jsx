@@ -10,8 +10,8 @@ export default function GalleryPreview() {
 
   const items = [
     { img: bridalImg, label: 'Bridal Makeup', height: 'h-[450px]', mt: 'mt-0' },
-    { img: haircutImg, label: 'Haircut', height: 'h-[350px]', mt: 'mt-12' },
-    { img: makeupImg, label: 'Makeup', height: 'h-[400px]', mt: 'mt-6' },
+    { img: haircutImg, label: 'Hair Coloring', height: 'h-[350px]', mt: 'mt-12' },
+    { img: makeupImg, label: 'Facial', height: 'h-[400px]', mt: 'mt-6' },
   ];
 
   const containerVariants = {
@@ -28,7 +28,7 @@ export default function GalleryPreview() {
   };
 
   return (
-    <section id="gallery" className="bg-[#FDF8F5] py-24 lg:py-32 overflow-hidden">
+    <section id="gallery" className="bg-cream py-24 lg:py-32 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-24">
         {/* Header */}
         <motion.div 
@@ -66,7 +66,7 @@ export default function GalleryPreview() {
               />
               
               {/* Elegant Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-noir/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+              <div className="absolute inset-0 bg-linear-to-t from-noir/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
                 <p className="font-body text-[10px] tracking-[0.2em] uppercase text-cream/70 mb-2">Category</p>
                 <h3 className="font-display text-2xl text-white">{item.label}</h3>
               </div>
