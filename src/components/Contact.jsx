@@ -20,9 +20,7 @@ const Contact = () => {
             <div className="space-y-4">
               <p className="font-body text-[10px] text-gold tracking-[0.2em] uppercase">Location</p>
               <p className="font-display text-2xl text-noir leading-relaxed">
-                742 Serenity Blvd <br />
-                Suite 100 <br />
-                Blossom Heights
+                Shop #5, Bismillah Masjid, Near M. Suleman Mithai Wala, Kharadar Karachi.
               </p>
             </div>
 

@@ -6,6 +6,8 @@ import Hero from '../components/Hero';
 import Services from '../components/Services';
 import Story from '../components/Story';
 import GalleryPreview from '../components/GalleryPreview';
+import GoogleReviews from '../components/GoogleReviews';
+import InstagramFeed from '../components/InstagramFeed';
 import Contact from '../components/Contact';
 
 const HomePage = () => {
@@ -33,6 +35,8 @@ const HomePage = () => {
       <Services />
       <Story />
       <GalleryPreview />
+      <GoogleReviews />
+      <InstagramFeed />
       <Contact />
     </motion.div>
   );

@@ -4,7 +4,7 @@ import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { scrollToSection } from '../utils/scroll';
 import { WHATSAPP_URL } from '../utils/whatsapp';
-import Logo from '../components/Logo';
+import logo from '../assets/logo/parlor.pfp.png';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -57,25 +57,32 @@ export default function Navbar() {
         {/* Logo - Left aligned */}
         {/* Logo - Always visible and links to Home */}
         <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+          whileHover={{ scale: 1.03 }}
+          whileTap={{ scale: 0.97 }}
           onClick={() => {
-            if (location.pathname === '/') {
-              scrollToSection('hero'); // Scroll up if already on home
-            } else {
-              navigate('/'); // Go to home if on another page
-            }
+            if (isHomePage) scrollToSection('hero');
+            else navigate('/');
           }}
-          className="flex items-center"
-          style={{ 
-            background: 'none', 
-            border: 'none', 
-            padding: 0, 
+          style={{
+            background: 'none',
+            border: 'none',
+            padding: 0,
             cursor: 'pointer',
-            minWidth: '100px'
+            display: 'flex',
+            alignItems: 'center'
           }}
         >
-          <Logo scrolled={scrolled} size={scrolled ? 32 : 44} style={{ minWidth: '100px' }} lightBg={!isHomePage || scrolled} />
+          <img
+            src={logo}
+            alt="Flourish Beauty Parlour"
+            style={{
+              height: scrolled ? '52px' : '64px',
+              width: 'auto',
+              objectFit: 'contain',
+              display: 'block',
+              transition: 'height 0.4s ease'
+            }}
+          />
         </motion.button>
 
         {/* Links - Center aligned */}

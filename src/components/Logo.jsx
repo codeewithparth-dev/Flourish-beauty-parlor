@@ -1,10 +1,10 @@
-import logo from '../assets/logo/Parlor-logo.png';
-import logoDark from '../assets/logo/Parlor-dark-logo.png';
+import logo from '../assets/logo/parlor.pfp.png';
+import logoDark from '../assets/logo/parlor.pfp.png';
 
 export default function Logo({ scrolled, size = 48, lightBg = false, style = {} }) {
   // Use the appropriate logo based on background
-  // - Original white-text logo on dark backgrounds (home page, not scrolled)
-  // - Dark-text logo on light backgrounds (other pages or when scrolled)
+  // - Main logo (parlor.pfp.png) for better visibility on all backgrounds
+  // - Dark logo only when specifically needed for light backgrounds
   const currentLogo = lightBg ? logoDark : logo;
   
   return (
