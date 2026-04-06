@@ -1,3 +1,20 @@
+/* Global Mobile Responsiveness Fixes */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&family=Inter:wght@300;400;500;600&family=Great+Vibes&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
 @import "tailwindcss";
@@ -20,7 +37,7 @@
   --animate-spin-slow: spin 8s linear infinite;
 }
 
-*, *::before, *::after { box-sizing: border-box; }
+/* Legacy rule - kept for compatibility */
 button, a, [role="button"] { cursor: pointer; }
 body {
   font-family: "Inter", sans-serif;

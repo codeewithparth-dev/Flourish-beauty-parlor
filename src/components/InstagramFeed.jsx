@@ -49,7 +49,7 @@ export default function InstagramFeed() {
         {/* Instagram Widget */}
         <div style={{
           width: '100%',
-          overflow: 'hidden',
+          overflowX: 'hidden',
           marginBottom: '40px',
           borderRadius: '16px'
         }}>
@@ -61,10 +61,10 @@ export default function InstagramFeed() {
             title="Posts from Instagram"
             style={{
               border: 'none',
-              overflow: 'hidden',
               width: '100%',
               height: '280px',
-              display: 'block'
+              display: 'block',
+              maxWidth: '100%'
             }}
           />
         </div>

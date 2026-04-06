@@ -92,7 +92,7 @@ const GalleryPage = () => {
       : allGalleryItems.filter((item) => item.category === activeFilter);
 
   return (
-    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', overflowX: 'hidden' }}>
       <div style={{ flex: 1, paddingBottom: '120px', paddingTop: '100px' }}>
 
         {/* ── Header ───────────────────────────────── */}

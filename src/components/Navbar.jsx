@@ -53,7 +53,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={navClasses}>
+      <nav className={navClasses} style={{ maxWidth: '100vw', overflowX: 'hidden' }}>
         {/* Logo - Left aligned */}
         {/* Logo - Always visible and links to Home */}
         <motion.button

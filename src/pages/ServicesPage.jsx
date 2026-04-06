@@ -180,7 +180,7 @@ const ServicesPage = () => {
       {/* Services Bento Grid */}
       <section className="pb-32 px-6 sm:px-12 lg:px-24">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-6 gap-8" style={{ overflowX: 'hidden' }}>
             {services.map((service, index) => {
               // Layout logic:
               // Row 1 (Index 0,1): 2 Large (3 columns each)

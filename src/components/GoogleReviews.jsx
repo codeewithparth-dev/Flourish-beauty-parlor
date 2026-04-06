@@ -152,7 +152,7 @@ export default function GoogleReviews() {
                 {/* Reviews Grid */}
                 <div style={{
                     display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+                    gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))',
                     gap: '20px'
                 }}>
                     {reviews.map((review, i) => (
