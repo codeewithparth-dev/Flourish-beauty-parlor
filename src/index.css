@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
 @import "tailwindcss";
 
+/* stylelint-disable-next-line at-rule-no-unknown */
 @theme {
   --color-cream: #FDF8F5;
   --color-blush: #F5EDE8;
