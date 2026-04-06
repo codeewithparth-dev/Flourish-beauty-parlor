@@ -42,16 +42,51 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Map Placeholder */}
-          <div className="relative rounded-[40px] overflow-hidden aspect-21/9 bg-blush/30 border border-gold/10 group">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <MapPin className="w-8 h-8 text-gold/20 group-hover:scale-110 transition-transform duration-500" />
+          {/* Google Maps Embed */}
+          <div>
+            <div style={{
+              width: '100%',
+              borderRadius: '24px',
+              overflow: 'hidden',
+              height: '400px',
+              border: '1px solid rgba(201,130,154,0.2)'
+            }}>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3619.5!2d66.9966220!3d24.8518690!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDUxJzA3LjciTiA2NsKwNTknNDcuOCJF!5e0!3m2!1sen!2spk!4v1"
+                width="100%"
+                height="400"
+                style={{ border: 0, display: 'block' }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Flourish Beauty Parlour Location"
+              />
             </div>
-            <div className="absolute inset-x-0 bottom-0 p-8 bg-linear-to-t from-noir/5 to-transparent">
-              <button className="text-[10px] tracking-[0.3em] uppercase text-gold hover:text-rose transition-colors">
-                Open in Directions →
-              </button>
-            </div>
+            <a
+              href="https://www.google.com/maps?q=24.8518690,66.9966220"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                marginTop: '16px',
+                backgroundColor: '#c9829a',
+                color: 'white',
+                padding: '12px 28px',
+                borderRadius: '999px',
+                textDecoration: 'none',
+                fontFamily: 'sans-serif',
+                fontSize: '10px',
+                letterSpacing: '0.3em',
+                textTransform: 'uppercase',
+                transition: 'all 0.3s ease'
+              }}
+              onMouseEnter={e => e.currentTarget.style.backgroundColor = '#b06880'}
+              onMouseLeave={e => e.currentTarget.style.backgroundColor = '#c9829a'}
+            >
+              Open in Google Maps
+            </a>
           </div>
         </div>
       </div>
