@@ -3,11 +3,11 @@ import { MapPin } from 'lucide-react';
 
 const Contact = () => {
   return (
-    <section id="contact" className="bg-cream py-24 lg:py-32">
+    <section id="contact" className="bg-cream py-12 sm:py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-24">
         
         {/* Section Header */}
-        <div className="text-center mb-20 space-y-4">
+        <div className="text-center mb-10 sm:mb-16 space-y-4">
           <span className="font-body text-[10px] text-gold tracking-[0.3em] uppercase block">
             The Atelier
           </span>
@@ -16,7 +16,7 @@ const Contact = () => {
 
         <div className="max-w-4xl mx-auto">
           {/* Contact Info (centered grid) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 text-center md:text-left mb-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center mb-10 sm:mb-16">
             <div className="space-y-4">
               <p className="font-body text-[10px] text-gold tracking-[0.2em] uppercase">Location</p>
               <p className="font-display text-2xl text-noir leading-relaxed">
@@ -45,15 +45,15 @@ const Contact = () => {
           <div>
             <div style={{
               width: '100%',
-              borderRadius: '24px',
+              borderRadius: '16px',
               overflow: 'hidden',
-              height: '400px',
+              height: '300px',
               border: '1px solid rgba(201,130,154,0.2)'
             }}>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3619.5!2d66.9966220!3d24.8518690!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDUxJzA3LjciTiA2NsKwNTknNDcuOCJF!5e0!3m2!1sen!2spk!4v1"
                 width="100%"
-                height="400"
+                height="300"
                 style={{ border: 0, display: 'block' }}
                 allowFullScreen=""
                 loading="lazy"

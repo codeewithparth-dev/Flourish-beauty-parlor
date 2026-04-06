@@ -53,7 +53,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={navClasses} style={{ maxWidth: '100vw', overflowX: 'hidden' }}>
+      <nav className={navClasses} style={{ maxWidth: '100vw', overflowX: 'hidden', width: '100%' }}>
         {/* Logo - Left aligned */}
         {/* Logo - Always visible and links to Home */}
         <motion.button
@@ -76,8 +76,9 @@ export default function Navbar() {
             src={logo}
             alt="Flourish Beauty Parlour"
             style={{
-              height: scrolled ? '52px' : '64px',
+              height: scrolled ? '44px' : '56px',
               width: 'auto',
+              maxWidth: '120px',
               objectFit: 'contain',
               display: 'block',
               transition: 'height 0.4s ease'

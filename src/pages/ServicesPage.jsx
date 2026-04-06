@@ -156,7 +156,7 @@ const ServicesPage = () => {
     <div className="bg-cream min-h-screen">
 
       {/* Hero Section */}
-      <section className="pt-40 pb-20 px-6 sm:px-12 lg:px-24">
+      <section className="pt-28 pb-10 px-4 sm:px-12 lg:px-24">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -167,7 +167,7 @@ const ServicesPage = () => {
             <span className="font-body text-[10px] text-pink tracking-[0.4em] uppercase">
               Our Indulgence
             </span>
-            <h1 className="font-display text-6xl sm:text-8xl text-noir leading-none">
+            <h1 className="font-display text-4xl sm:text-6xl lg:text-8xl text-noir leading-none">
               Our Services
             </h1>
             <p className="font-body text-base sm:text-lg text-muted max-w-2xl mx-auto leading-relaxed">
@@ -178,7 +178,7 @@ const ServicesPage = () => {
       </section>
 
       {/* Services Bento Grid */}
-      <section className="pb-32 px-6 sm:px-12 lg:px-24">
+      <section className="pb-16 sm:pb-24 px-4 sm:px-12 lg:px-24">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-6 gap-8" style={{ overflowX: 'hidden' }}>
             {services.map((service, index) => {

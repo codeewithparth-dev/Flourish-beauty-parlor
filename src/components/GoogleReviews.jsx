@@ -89,7 +89,7 @@ const GoogleIcon = () => (
 
 export default function GoogleReviews() {
     return (
-        <section style={{ backgroundColor: '#1a0e0a', padding: '80px 24px' }}>
+        <section style={{ backgroundColor: '#1a0e0a', padding: 'clamp(40px, 8vw, 80px) 24px' }}>
             <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
 
                 {/* Header */}
@@ -112,7 +112,7 @@ export default function GoogleReviews() {
                     </p>
                     <h2 style={{
                         fontFamily: 'serif',
-                        fontSize: '48px',
+                        fontSize: 'clamp(32px, 6vw, 48px)',
                         color: '#f5f0e8',
                         fontWeight: 400,
                         margin: '0 0 20px 0',
@@ -152,7 +152,7 @@ export default function GoogleReviews() {
                 {/* Reviews Grid */}
                 <div style={{
                     display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))',
+                    gridTemplateColumns: 'repeat(auto-fill, minmax(min(240px, 100%), 1fr))',
                     gap: '20px'
                 }}>
                     {reviews.map((review, i) => (

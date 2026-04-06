@@ -1,9 +1,20 @@
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const INSTAGRAM_HANDLE = 'flourish.parlour';
 const INSTAGRAM_URL = 'https://www.instagram.com/' + INSTAGRAM_HANDLE;
 
 export default function InstagramFeed() {
+  const [iframeHeight, setIframeHeight] = useState('520px');
+
+  useEffect(() => {
+    const updateHeight = () => {
+      setIframeHeight(window.innerWidth < 768 ? '280px' : '520px');
+    };
+    updateHeight();
+    window.addEventListener('resize', updateHeight);
+    return () => window.removeEventListener('resize', updateHeight);
+  }, []);
   return (
     <section style={{ 
       backgroundColor: '#f5f0e8', 
@@ -74,7 +85,8 @@ export default function InstagramFeed() {
             width: '100%',
             overflowX: 'hidden',
             marginBottom: '32px',
-            borderRadius: '16px'
+            borderRadius: '16px',
+            position: 'relative'
           }}
         >
           <iframe
@@ -86,7 +98,7 @@ export default function InstagramFeed() {
             style={{
               border: 'none',
               width: '100%',
-              height: '520px',
+              height: iframeHeight,
               display: 'block',
               maxWidth: '100%'
             }}

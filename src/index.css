@@ -5,13 +5,17 @@
 
 html, body {
   overflow-x: hidden;
-  max-width: 100%;
+  max-width: 100vw;
   margin: 0;
   padding: 0;
 }
 
 #root {
   overflow-x: hidden;
+  max-width: 100vw;
+}
+
+img, iframe, video {
   max-width: 100%;
 }
 
@@ -63,14 +67,14 @@ h1, h2, h3, h4, h5, h6 {
 .hero-title .line-parlour {
   font-family: 'Playfair Display', serif;
   font-weight: 800;
-  font-size: clamp(4rem, 10vw, 8rem);
+  font-size: clamp(2.5rem, 10vw, 8rem);
   color: #ffffff;
   text-transform: capitalize;
 }
 
 .hero-title .line-beauty {
   font-family: 'Gloock', serif;
-  font-size: clamp(3rem, 8vw, 6rem);
+  font-size: clamp(2rem, 8vw, 6rem);
   color: #d4607a;
   margin-left: 0.2em; /* slight natural offset */
   line-height: 0.8;

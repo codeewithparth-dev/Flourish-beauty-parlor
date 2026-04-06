@@ -3,14 +3,14 @@ import atelierImg from '../assets/images/luxury-atlier.webp';
 
 const Story = () => {
   return (
-    <section id="story" className="bg-cream py-24 lg:py-32 overflow-hidden">
-      <div className="rounded-[60px] object-cover shadow-sm max-w-7xl mx-auto px-6 sm:px-12 lg:px-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-32 items-center">
+    <section id="story" className="bg-cream py-16 sm:py-24 lg:py-32 overflow-hidden">
+      <div className="rounded-[60px] object-cover shadow-sm max-w-7xl mx-auto px-4 sm:px-12 lg:px-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-32 items-center">
 
           {/* Left Column: Typography & Story */}
           <div className="space-y-12">
             <div className="space-y-6">
-              <h2 className="font-display text-5xl sm:text-7xl text-noir leading-[1.1] tracking-tight">
+              <h2 className="font-display text-4xl sm:text-6xl lg:text-7xl text-noir leading-[1.1] tracking-tight">
                 Beyond the <br />
                 <span className="relative inline-block">
                   <span className="relative z-10 italic font-light">Surface</span>
