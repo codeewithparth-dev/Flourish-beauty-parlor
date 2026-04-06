@@ -27,8 +27,7 @@ const Contact = () => {
             <div className="space-y-4">
               <p className="font-body text-[10px] text-gold tracking-[0.2em] uppercase">Concierge</p>
               <p className="font-display text-2xl text-noir leading-relaxed">
-                (324) 2008736  <br />
-                hello@flourish.com
+                (324) 2008736
               </p>
             </div>
 
