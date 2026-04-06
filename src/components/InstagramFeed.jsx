@@ -1,17 +1,7 @@
 import { motion } from 'framer-motion';
-import { ExternalLink } from 'lucide-react';
 
 const INSTAGRAM_HANDLE = 'flourish.parlour';
-const INSTAGRAM_URL = 'https://www.instagram.com/flourish.parlour/' + INSTAGRAM_HANDLE;
-
-const placeholderPosts = [
-  { id: 1, bg: '#2d1a14' },
-  { id: 2, bg: '#1a0e14' },
-  { id: 3, bg: '#1a140e' },
-  { id: 4, bg: '#2d1a1a' },
-  { id: 5, bg: '#1a1a0e' },
-  { id: 6, bg: '#141a1a' },
-];
+const INSTAGRAM_URL = 'https://www.instagram.com/' + INSTAGRAM_HANDLE;
 
 export default function InstagramFeed() {
   return (
@@ -56,70 +46,27 @@ export default function InstagramFeed() {
           </p>
         </motion.div>
 
-        {/* Grid */}
+        {/* Instagram Widget */}
         <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))',
-          gap: '12px',
-          marginBottom: '40px'
+          width: '100%',
+          overflow: 'hidden',
+          marginBottom: '40px',
+          borderRadius: '16px'
         }}>
-          {placeholderPosts.map((post, i) => (
-            <motion.a
-              key={post.id}
-              href={INSTAGRAM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
-              whileHover={{ scale: 1.03 }}
-              style={{
-                display: 'block',
-                aspectRatio: '1',
-                backgroundColor: post.bg,
-                borderRadius: '16px',
-                overflow: 'hidden',
-                position: 'relative',
-                cursor: 'pointer',
-                textDecoration: 'none'
-              }}
-            >
-              {/* Overlay on hover */}
-              <div
-                style={{
-                  position: 'absolute',
-                  inset: 0,
-                  backgroundColor: 'rgba(201,130,154,0.15)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  opacity: 0,
-                  transition: 'opacity 0.3s ease'
-                }}
-                onMouseEnter={e => e.currentTarget.style.opacity = '1'}
-                onMouseLeave={e => e.currentTarget.style.opacity = '0'}
-              >
-                <ExternalLink size={20} color="white" />
-              </div>
-
-              {/* Instagram gradient placeholder */}
-              <div style={{
-                position: 'absolute',
-                inset: 0,
-                background: `linear-gradient(135deg, ${post.bg}, #c9829a22)`,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
-              }}>
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(201,130,154,0.3)" strokeWidth="1.5">
-                  <rect x="2" y="2" width="20" height="20" rx="5"/>
-                  <circle cx="12" cy="12" r="4"/>
-                  <circle cx="17.5" cy="6.5" r="1" fill="rgba(201,130,154,0.3)" stroke="none"/>
-                </svg>
-              </div>
-            </motion.a>
-          ))}
+          <iframe 
+            src="https://snapwidget.com/embed/1121453"
+            allowTransparency="true"
+            frameBorder="0"
+            scrolling="no"
+            title="Posts from Instagram"
+            style={{
+              border: 'none',
+              overflow: 'hidden',
+              width: '100%',
+              height: '280px',
+              display: 'block'
+            }}
+          />
         </div>
 
         {/* Follow Button */}

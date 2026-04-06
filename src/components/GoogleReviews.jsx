@@ -4,14 +4,14 @@ const reviews = [
     {
         name: 'Fatima Khan',
         rating: 4.5,
-        date: '2 weeks ago',
+        date: '5 days ago',
         text: 'Amazing bridal makeup! I felt like a queen on my wedding day. The team is so professional and skilled. Highly recommend Flourish to every bride.',
         avatar: 'F'
     },
     {
         name: 'Sana Ahmed',
         rating: 4.0,
-        date: '1 month ago',
+        date: '1 week ago',
         text: 'The mehndi design was absolutely stunning. Everyone at my wedding was asking who did it. Will definitely come back for every occasion!',
         avatar: 'S'
     },
