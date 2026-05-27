@@ -25,10 +25,13 @@ function AppRoutes() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </AnimatePresence>
-      <AdBanner /> {/* Add the AdBanner component here */}
+      <AdBanner />
       <Footer />
     </>
   );
+}
+
+function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
