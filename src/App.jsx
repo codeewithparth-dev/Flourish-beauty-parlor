@@ -8,6 +8,10 @@ import HomePage from './pages/HomePage'
 import GalleryPage from './pages/GalleryPage'
 import ServicesPage from './pages/ServicesPage'
 import NotFound from './pages/NotFound'
+import AdBanner from './components/AdBanner'
+
+// Place it between sections wherever you want
+<AdBanner />
 
 function AppRoutes() {
   const location = useLocation();
